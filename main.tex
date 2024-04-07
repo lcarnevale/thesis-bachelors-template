@@ -1,0 +1,58 @@
+\documentclass[a4paper, 12pt]{report}
+
+% \usepackage[italian]{babel} % IT
+\usepackage[english]{babel} % EN
+\usepackage{newlfont}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{listings}
+\lstset { 
+    %Formatting for code in appendix
+    basicstyle=\footnotesize,
+    literate={°}{{\"\deg}}1,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+\usepackage[bookmarks=true]{hyperref}
+\hypersetup{
+        colorlinks=true,
+        linkcolor=black,
+        anchorcolor=black,
+        citecolor=black,
+        urlcolor=black,
+        pdftitle={TITLE},
+        pdfauthor={NAME SURNAME},
+        pdfkeywords={COMMA SEPARETED LIST}
+}
+\usepackage{setspace} % imposta interlinea
+\doublespacing % interlinea 2
+\textwidth=450pt\oddsidemargin=0pt\linespread{1.4}
+% add more packages here
+
+\begin{document}
+
+    \input{front/frontespice}
+    \input{front/index}
+    \input{front/indexfigures}
+    \input{front/indextables}
+    \input{front/indexcode}
+    \input{front/abstract}
+    \input{front/acknowledgement}
+    
+    \input{body/chapter1}
+    \input{body/chapter2}
+    \input{body/chapter3}
+    \input{body/chapter4}
+    \input{body/chapter5}
+    
+    \bibliographystyle{unsrt}
+    \bibliography{blibliography}
+
+\end{document}
